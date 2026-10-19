@@ -1,0 +1,12 @@
+# escape=`
+# Нужен Docker Desktop в режиме Windows containers (хост Windows Pro/Enterprise).
+FROM python:3.12-windowsservercore-ltsc2022
+SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
+WORKDIR C:\work
+COPY app\ C:\work\app\
+RUN python -m venv C:\appenv ; `
+    C:\appenv\Scripts\python.exe -m pip install -U pip ; `
+    C:\appenv\Scripts\pip.exe install -r C:\work\app\requirements.txt
+RUN python -m venv C:\tools ; `
+    C:\tools\Scripts\python.exe -m pip install -U pip pip-audit safety
+CMD ["powershell"]

@@ -1,0 +1,10 @@
+# Linux (Debian). Приложение и аудиторы — в РАЗНЫХ venv, чтобы зависимости
+# самих утилит (например nltk у safety) не попадали в результаты аудита приложения.
+FROM python:3.12-slim
+WORKDIR /work
+COPY app/ /work/app/
+RUN python -m venv /opt/appenv && /opt/appenv/bin/pip install --no-cache-dir -U pip \
+ && /opt/appenv/bin/pip install --no-cache-dir -r /work/app/requirements.txt
+RUN python -m venv /opt/tools && /opt/tools/bin/pip install --no-cache-dir -U pip pip-audit safety
+ENV PATH="/opt/tools/bin:$PATH"
+CMD ["bash"]
