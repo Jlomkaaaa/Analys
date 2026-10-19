@@ -4,3 +4,6 @@ PyYAML==6.0.3
 Jinja2==3.1.6
 SQLAlchemy==2.0.43
 python-dotenv==1.2.4
+pydantic==2.14.0 # свежая
+rich==15.0.0 # свежая
+
