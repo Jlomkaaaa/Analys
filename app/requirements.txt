@@ -6,7 +6,7 @@ Jinja2==3.1.6
 #python-dotenv==1.2.4
 pydantic==2.14.0 # свежая
 rich==15.0.0 # свежая
-#requests==2.34.2          # УЯЗВИМАЯ
+#requests==2.30.2          # УЯЗВИМАЯ
 python-dotenv==0.21.1     # УЯЗВИМАЯ
 PyYAML==6.0.1             # устаревшая
 SQLAlchemy==1.4.54        # устаревшая
