@@ -1,5 +1,5 @@
 Flask==3.1.3
-requests==2.34.2          # УЯЗВИМАЯ
+requests==2.33.0          # УЯЗВИМАЯ
 python-dotenv==1.2.4     # УЯЗВИМАЯ
 PyYAML==6.0.1             # устаревшая
 SQLAlchemy==1.4.54        # устаревшая
