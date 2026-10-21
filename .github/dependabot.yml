@@ -4,8 +4,6 @@ updates:
     directory: "/app"            # каталог с requirements.txt
     schedule:
       interval: "daily"          # daily | weekly | monthly
-      time: "09:00"
-      timezone: "Asia/Almaty"
     open-pull-requests-limit: 10
     labels: ["dependencies", "security"]
     commit-message:
